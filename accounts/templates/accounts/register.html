@@ -1,0 +1,204 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register - Travel Information System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #000;
+      min-height: 100vh;
+      background: #fff;
+    }
+
+    /* ✅ 2-column layout */
+    .page {
+      min-height: 100vh;
+      display: flex;
+    }
+
+    /* ✅ LEFT IMAGE PANEL */
+    .left {
+      flex: 1;
+      min-height: 100vh;
+      background-image: url("{% static 'images/register_bg.jpeg' %}");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;      /* ✅ not zoomed */
+      background-color: #f2f2f2;     /* ✅ fills empty space */
+    }
+
+    /* ✅ RIGHT FORM PANEL */
+    .right {
+      flex: 1;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;  /* center card horizontally inside right panel */
+      align-items: center;      /* center card vertically inside right panel */
+      padding: 40px 16px;
+      background: #fff;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 560px;
+      border: 1px solid #ddd;
+      padding: 44px 46px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* ✅ centers the form content */
+    }
+
+    .title-small {
+      text-align: center;
+      font-size: 26px;
+      letter-spacing: 1px;
+      margin: 0 0 10px;
+      font-weight: 500;
+    }
+
+    .title-big {
+      text-align: center;
+      font-size: 34px;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 22px;
+      margin: 0 0 22px;
+      font-weight: 600;
+    }
+
+    .row {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    label {
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      max-width: 420px;
+      padding: 12px 14px;
+      border: 1px solid #555;
+      font-size: 16px;
+      outline: none;
+      text-align: center;
+    }
+
+    .btn-wrap {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    button {
+      padding: 14px 52px;
+      font-size: 20px;
+      font-weight: 700;
+      border: 1px solid #777;
+      background: #f2f2f2;
+      cursor: pointer;
+    }
+
+    .bottom-link {
+      margin-top: 18px;
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 12px;
+      font-weight: 700;
+      background: #fff;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .bottom-link a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .bottom-link a:hover {
+      text-decoration: underline;
+    }
+
+    /* ✅ Mobile: stack image on top */
+    @media (max-width: 900px) {
+      .page { flex-direction: column; }
+      .left { min-height: 40vh; background-size: cover; } /* looks nicer on mobile */
+      .right { min-height: auto; }
+      .card { padding: 26px 20px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="left"></div>
+
+    <div class="right">
+      <div class="card">
+        <h2 class="title-small">TRAVEL INFORMATION SYSTEM</h2>
+        <h1 class="title-big">Register For New Account</h1>
+        <p class="subtitle">Create Your Account</p>
+
+        <form method="post">
+          {% csrf_token %}
+
+          <div class="row">
+            <label for="name">Enter Name:</label>
+            <input id="name" type="text" name="name" required>
+          </div>
+
+          <div class="row">
+            <label for="email">Enter Email:</label>
+            <input id="email" type="email" name="email" required>
+          </div>
+
+          <div class="row">
+            <label for="username">Username:</label>
+            <input id="username" type="text" name="username" required>
+          </div>
+
+          <div class="row">
+            <label for="password1">Enter Password:</label>
+            <input id="password1" type="password" name="password1" required>
+          </div>
+
+          <div class="row">
+            <label for="password2">Re-enter Password:</label>
+            <input id="password2" type="password" name="password2" required>
+          </div>
+
+          <div class="btn-wrap">
+            <button type="submit">Register</button>
+          </div>
+        </form>
+
+        <div class="bottom-link">
+          <a href="{% url 'login' %}">Already have an account? Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

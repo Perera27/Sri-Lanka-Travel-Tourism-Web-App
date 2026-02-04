@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Travel Information System</title>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    /* Background image */
+    .bg {
+      min-height: 100vh;
+      background: url("{% static 'images/login_bg.jpg' %}") no-repeat center center / cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 16px;
+      position: relative;
+    }
+
+    /* Soft overlay so text is readable */
+    .bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.55); /* neutral overlay (not green/blue) */
+    }
+
+    /* Main card */
+    .card {
+      position: relative;
+      width: 520px;
+      max-width: 100%;
+      padding: 40px 40px 30px;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 10px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+      text-align: center;
+    }
+
+    .brand {
+      position: absolute;
+      top: 20px;
+      left: 24px;
+      font-family: cursive;
+      font-size: 22px;
+      color: #111;
+    }
+
+    h1 {
+      letter-spacing: 1px;
+      font-size: 28px;
+      font-weight: 700;
+      margin-top: 10px;
+      margin-bottom: 25px;
+      color: #111;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 30px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .field {
+      text-align: left;
+      margin: 18px 0;
+    }
+
+    .field label {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #111;
+      font-weight: 500;
+      text-align: center; /* matches your screenshot */
+    }
+
+    .field input {
+      width: 260px;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+      padding: 10px 12px;
+      border: 1px solid rgba(0,0,0,0.35);
+      outline: none;
+      font-size: 15px;
+      background: rgba(255,255,255,0.9);
+    }
+
+    .links {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      font-size: 14px;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+    }
+
+    .btn {
+      margin-top: 26px;
+      display: inline-block;
+      width: 220px;
+      padding: 12px 0;
+      border: none;
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.25);
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .error {
+      margin-top: 14px;
+      color: #b00020;
+      font-size: 14px;
+    }
+
+    /* Bottom right register prompt like your screenshot */
+    .bottom-right {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      background: rgba(255,255,255,0.85);
+      padding: 14px 18px;
+      border: 1px solid rgba(0,0,0,0.12);
+      border-radius: 6px;
+      font-weight: 600;
+      color: #111;
+      max-width: 320px;
+    }
+
+    .bottom-right a {
+      color: #111;
+      text-decoration: underline;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg">
+    <div class="card">
+      <div class="brand">Love Sri Lanka</div>
+
+      <h1>TRAVEL INFORMATION SYSTEM</h1>
+      <h2>Login</h2>
+
+      <form method="post">
+        {% csrf_token %}
+
+        <div class="field">
+          <label for="id_username">Enter Your Username</label>
+          <input type="text" name="username" id="id_username" required>
+        </div>
+
+        <div class="field">
+          <label for="id_password">Enter Your Password</label>
+          <input type="password" name="password" id="id_password" required>
+        </div>
+
+        <div class="links">
+          <a href="{% url 'password_reset' %}">Forgot Password</a>
+        </div>
+
+        <button class="btn" type="submit">Login</button>
+
+        {% if form.errors %}
+          <div class="error">Incorrect username or password. Try again.</div>
+        {% endif %}
+      </form>
+    </div>
+
+    <div class="bottom-right">
+      Don’t have an account? <a href="#">Register</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Travel Information System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background: #ffffff;
+      color: #000;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 60px;
+      position: relative;
+      z-index: 10;
+      background: #fff;
+    }
+
+    .logo {
+      font-family: cursive;
+      font-size: 26px;
+    }
+
+    .nav-links a {
+      margin: 0 18px;
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .auth-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #000;
+    }
+
+    /* HERO VIDEO */
+    .hero-video {
+      position: relative;
+      height: 90vh;
+      width: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .hero-video video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;   /* ✅ center horizontally */
+      color: #fff;
+    }
+
+
+    .hero-overlay h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+
+    .hero-text {
+      max-width: 900px;
+      padding: 0 10px;
+    }
+
+    .hero-text h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    /* DESTINATION GUIDE */
+    .destination-guide {
+      padding: 80px 10%;
+      background: #fff;
+    }
+
+    .destination-guide h1 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    .destination-guide p {
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 900px;
+    }
+
+    .map-container {
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    .map-container img {
+      width: 420px;
+      max-width: 100%;
+    }
+
+    .cta {
+      text-align: right;
+      margin-top: 30px;
+    }
+
+    .find-more {
+      font-size: 20px;
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo">Love Sri Lanka</div>
+
+    <div class="nav-links">
+      <a href="{% url 'home' %}">Home</a>
+      <a href="#">Planning a trip</a>
+      <a href="#">Destinations</a>
+      <a href="#">Key Experiences</a>
+    </div>
+    
+    <div class="auth-links">
+      <a href="{% url 'login' %}">Login</a>
+      <a href="{% url 'register' %}">Register</a>
+    </div>
+
+  </div>
+
+  <!-- HERO VIDEO SECTION -->
+  <section class="hero-video">
+    <video autoplay muted loop playsinline>
+      <source src="{% static 'videos/sri_lanka_intro.mp4' %}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-overlay">
+      <h1>An island escape awaits you</h1>
+
+      <div class="hero-text">
+        <h2>Explore Island Stories</h2>
+        <p>
+          Each place, and each smile in Sri Lanka has a story to tell.
+          We have so much to share with you, so come along to our island in paradise!
+          <br><br>
+          Sri Lanka offers a captivating mix of tropical landscapes, rich cultural
+          heritage, and diverse wildlife. From its stunning beaches to ancient temples
+          and lush tea plantations, the island is a paradise for nature lovers and
+          history buffs alike.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINATION GUIDE SECTION -->
+  <section class="destination-guide">
+    <h1>Destination Guide Holiday in Sri Lanka</h1>
+
+    <p>
+      Sri Lanka is a meeting place of friendly faces who share their homes and trade;
+      a space for spiritual healing; a land for learning from the old and the new;
+      a hub of commercial activity; a spot for tranquility. Sri Lanka casts a spell
+      unlike anywhere else. It draws people in, not with artificial attractions and
+      grand gestures, but by spellbinding soul and sincerity.
+    </p>
+
+    <div class="map-container">
+      <img src="{% static 'images/sri_lanka_map.jpg' %}" alt="Sri Lanka Map">
+    </div>
+
+    <!-- SUSTAINABILITY SECTION -->
+  <section class="Sustainability">
+    <h1>Sustainability</h1>
+
+    <p>
+      Sri Lanka excels in sustainable tourism, emphasising responsible tourism practices and community involvement. The country promotes responsible wildlife tourism, conserves natural habitats, and supports local artisans. Initiatives like organic farming, green accommodations, and cultural preservation showcase Sri Lanka’s commitment to protecting its rich heritage, pristine environment, and diverse biodiversity for future generations.
+      
+      Tourism & People
+      In Sri Lanka, always remove your shoes before entering temples and cover your shoulders and knees as a sign of respect. When greeting, a slight bow with hands pressed together, saying “Ayubowan” (a wish for long life), shows cultural appreciation. Enjoy hoppers and kottu from street vendors, and consider purchasing handwoven textiles or handmade pottery to support local artisans. Always ask before taking photos of people to respect their privacy.
+      
+      Nature & Wildlife
+      Sri Lanka boasts rich biodiversity. Visit Yala National Park to spot leopards and elephants. Explore Sinharaja Forest Reserve, a UNESCO World Heritage site, for unique flora and fauna. Bird enthusiasts will love Bundala National Park. Always maintain distance from wildlife and respect natural habitats to preserve this island’s beauty.
+    </p>
+  </section>
+
+</body>
+</html>
