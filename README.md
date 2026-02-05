@@ -15,3 +15,12 @@
 
 4. Run server:
    python manage.py runserver
+
+
+Live prototype: https://w1998413.pythonanywhere.com
+
+Admin panel: https://w1998413.pythonanywhere.com/admin
+
+Test/Admin credentials: (username + password you created)
+
+GitHub repo: https://github.com/Perera27/Sri-Lanka-Travel-Tourism-Web-App
