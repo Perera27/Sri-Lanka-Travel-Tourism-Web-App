@@ -16,6 +16,7 @@
 4. Run server:
    python manage.py runserver
 
+Hosting in pythonanywhere
 
 Live prototype: https://w1998413.pythonanywhere.com
 
