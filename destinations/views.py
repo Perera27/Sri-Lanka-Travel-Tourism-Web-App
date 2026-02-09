@@ -1,6 +1,4 @@
-
-# Create your views here.
 from django.shortcuts import render
 
-def home(request):
-    return render(request, "home.html")
+def travel_home(request):
+    return render(request, "destinations/travel_home.html")
