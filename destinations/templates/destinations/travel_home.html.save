@@ -1,0 +1,2447 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<<<<<<< Updated upstream
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+=======
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />>>>>>>> Stashed changes
+  <title>Sri Lanka Travel Information System</title>
+
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Leaflet (Map) -->
+<<<<<<< Updated upstream
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+  <style>
+    :root{
+      --brand:#0f766e;       /* teal */
+      --brand-2:#f59e0b;     /* amber */
+      --ink:#0b1220;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f6f7fb;
+    }
+    body{
+      background:var(--bg);
+      color:var(--ink);
+    }
+    .navbar-brand{
+      font-weight:800;
+      letter-spacing:.3px;
+    }
+    .brand-dot{ color: var(--brand-2); }
+
+    .hero{
+      position:relative;
+      border-radius:24px;
+      overflow:hidden;
+      background: #0b1220;
+      min-height: 380px;
+      box-shadow: 0 16px 40px rgba(2,6,23,.15);
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(90deg, rgba(11,18,32,.88), rgba(11,18,32,.45)),
+=======
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <style>
+    :root {
+      --brand: #0f766e;
+      /* teal */
+      --brand-2: #f59e0b;
+      /* amber */
+      --ink: #0b1220;
+      --muted: #6b7280;
+      --card: #ffffff;
+      --bg: #f6f7fb;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    .navbar-brand {
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
+
+    .brand-dot {
+      color: var(--brand-2);
+    }
+
+    .hero {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #0b1220;
+      min-height: 380px;
+      box-shadow: 0 16px 40px rgba(2, 6, 23, .15);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(11, 18, 32, .88), rgba(11, 18, 32, .45)),
+>>>>>>> Stashed changes
+        url("https://images.unsplash.com/photo-1546707012-8b19b50a498b?auto=format&fit=crop&w=1600&q=70");
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.05);
+    }
+<<<<<<< Updated upstream
+    .hero .content{
+      position:relative;
+      padding: 56px 28px;
+    }
+    .hero h1{
+      font-weight: 900;
+      line-height: 1.05;
+    }
+    .badge-soft{
+      background: rgba(15,118,110,.12);
+      border: 1px solid rgba(15,118,110,.25);
+      color: var(--brand);
+      font-weight: 600;
+    }
+    .section-title{
+      font-weight: 850;
+      letter-spacing:.2px;
+    }
+    .card{
+      border: 0;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(2,6,23,.06);
+    }
+    .card-img-top{
+      height: 170px;
+      object-fit: cover;
+    }
+    .pill{
+      border-radius: 999px;
+      font-size: .8rem;
+      padding: .25rem .6rem;
+      background: rgba(245,158,11,.14);
+      border: 1px solid rgba(245,158,11,.28);
+      color:#92400e;
+      font-weight: 600;
+    }
+    .pill2{
+      border-radius: 999px;
+      font-size: .8rem;
+      padding: .25rem .6rem;
+      background: rgba(59,130,246,.12);
+      border: 1px solid rgba(59,130,246,.22);
+      color:#1d4ed8;
+      font-weight: 600;
+    }
+    .muted{ color: var(--muted); }
+
+    .btn-brand{
+=======
+
+    .hero .content {
+      position: relative;
+      padding: 56px 28px;
+    }
+
+    .hero h1 {
+      font-weight: 900;
+      line-height: 1.05;
+    }
+
+    .badge-soft {
+      background: rgba(15, 118, 110, .12);
+      border: 1px solid rgba(15, 118, 110, .25);
+      color: var(--brand);
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-weight: 850;
+      letter-spacing: .2px;
+    }
+
+    .card {
+      border: 0;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(2, 6, 23, .06);
+    }
+
+    .card-img-top {
+      height: 170px;
+      object-fit: cover;
+    }
+
+    .pill {
+      border-radius: 999px;
+      font-size: .8rem;
+      padding: .25rem .6rem;
+      background: rgba(245, 158, 11, .14);
+      border: 1px solid rgba(245, 158, 11, .28);
+      color: #92400e;
+      font-weight: 600;
+    }
+
+    .pill2 {
+      border-radius: 999px;
+      font-size: .8rem;
+      padding: .25rem .6rem;
+      background: rgba(59, 130, 246, .12);
+      border: 1px solid rgba(59, 130, 246, .22);
+      color: #1d4ed8;
+      font-weight: 600;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .btn-brand {
+>>>>>>> Stashed changes
+      background: var(--brand);
+      border: 1px solid var(--brand);
+      color: #fff;
+      font-weight: 700;
+      border-radius: 12px;
+    }
+<<<<<<< Updated upstream
+    .btn-brand:hover{ filter: brightness(.95); color:#fff; }
+    .btn-outline-brand{
+      border: 1px solid rgba(15,118,110,.4);
+      color: var(--brand);
+      font-weight: 700;
+      border-radius: 12px;
+      background:#fff;
+    }
+    .btn-outline-brand:hover{
+      background: rgba(15,118,110,.08);
+      color: var(--brand);
+    }
+
+    .kpi{
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 12px 28px rgba(2,6,23,.06);
+      padding: 16px;
+    }
+    .kpi .icon{
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      display:flex; align-items:center; justify-content:center;
+      background: rgba(15,118,110,.12);
+=======
+
+    .btn-brand:hover {
+      filter: brightness(.95);
+      color: #fff;
+    }
+
+    .btn-outline-brand {
+      border: 1px solid rgba(15, 118, 110, .4);
+      color: var(--brand);
+      font-weight: 700;
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .btn-outline-brand:hover {
+      background: rgba(15, 118, 110, .08);
+      color: var(--brand);
+    }
+
+    .kpi {
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 12px 28px rgba(2, 6, 23, .06);
+      padding: 16px;
+    }
+
+    .kpi .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(15, 118, 110, .12);
+>>>>>>> Stashed changes
+      color: var(--brand);
+      font-size: 1.2rem;
+    }
+
+<<<<<<< Updated upstream
+    .filters{
+=======
+    .filters {
+>>>>>>> Stashed changes
+      position: sticky;
+      top: 86px;
+    }
+
+<<<<<<< Updated upstream
+    #map{
+      width: 100%;
+      height: 440px;
+      border-radius: 18px;
+      overflow:hidden;
+      box-shadow: 0 12px 30px rgba(2,6,23,.08);
+    }
+
+    .list-group-item{
+      border: 0;
+      border-radius: 14px !important;
+      margin-bottom: 10px;
+      box-shadow: 0 10px 25px rgba(2,6,23,.06);
+    }
+
+    .drag-hint{
+=======
+    #map {
+      width: 100%;
+      height: 440px;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(2, 6, 23, .08);
+    }
+
+    .list-group-item {
+      border: 0;
+      border-radius: 14px !important;
+      margin-bottom: 10px;
+      box-shadow: 0 10px 25px rgba(2, 6, 23, .06);
+    }
+
+    .drag-hint {
+>>>>>>> Stashed changes
+      font-size: .85rem;
+      color: var(--muted);
+    }
+
+<<<<<<< Updated upstream
+    .footer{
+=======
+    .footer {
+>>>>>>> Stashed changes
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+<<<<<<< Updated upstream
+    .route-link.active{
+      background: rgba(15,118,110,.12);
+      border: 1px solid rgba(15,118,110,.18);
+=======
+    .route-link.active {
+      background: rgba(15, 118, 110, .12);
+      border: 1px solid rgba(15, 118, 110, .18);
+>>>>>>> Stashed changes
+      color: var(--brand) !important;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+<<<<<<< Updated upstream
+{% verbatim %}
+=======
+  {% verbatim %}
+>>>>>>> Stashed changes
+  <div id="app">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+      <div class="container py-2">
+        <a class="navbar-brand text-dark" href="#" @click.prevent="go('home')">
+          Visit Sri Lanka<span class="brand-dot">.</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav me-auto gap-1 mt-3 mt-lg-0">
+            <li class="nav-item">
+<<<<<<< Updated upstream
+              <a class="nav-link route-link px-3" href="#" :class="{active: route==='home'}" @click.prevent="go('home')">
+=======
+              <a class="nav-link route-link px-3" href="#" :class="{active: route==='home'}"
+                @click.prevent="go('home')">
+>>>>>>> Stashed changes
+                <i class="bi bi-house-door me-1"></i>Home
+              </a>
+            </li>
+            <li class="nav-item">
+<<<<<<< Updated upstream
+              <a class="nav-link route-link px-3" href="#" :class="{active: route==='explore'}" @click.prevent="go('explore')">
+=======
+              <a class="nav-link route-link px-3" href="#" :class="{active: route==='explore'}"
+                @click.prevent="go('explore')">
+>>>>>>> Stashed changes
+                <i class="bi bi-compass me-1"></i>Explore
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link route-link px-3" href="#" :class="{active: route==='map'}" @click.prevent="go('map')">
+                <i class="bi bi-geo-alt me-1"></i>Map
+              </a>
+            </li>
+            <li class="nav-item">
+<<<<<<< Updated upstream
+              <a class="nav-link route-link px-3" href="#" :class="{active: route==='planner'}" @click.prevent="go('planner')">
+=======
+              <a class="nav-link route-link px-3" href="#" :class="{active: route==='planner'}"
+                @click.prevent="go('planner')">
+>>>>>>> Stashed changes
+                <i class="bi bi-calendar2-check me-1"></i>Plan Trip
+              </a>
+            </li>
+            <li class="nav-item">
+<<<<<<< Updated upstream
+              <a class="nav-link route-link px-3" href="#" :class="{active: route==='tips'}" @click.prevent="go('tips')">
+=======
+              <a class="nav-link route-link px-3" href="#" :class="{active: route==='tips'}"
+                @click.prevent="go('tips')">
+>>>>>>> Stashed changes
+                <i class="bi bi-shield-check me-1"></i>Tips & Safety
+              </a>
+            </li>
+          </ul>
+
+          <div class="d-flex flex-wrap gap-2 align-items-center">
+            <div class="input-group" style="min-width: 260px;">
+              <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+<<<<<<< Updated upstream
+              <input class="form-control" placeholder="Search (e.g., Ella, beach, safari)"
+                     v-model.trim="q" @keydown.enter="go('explore')">
+=======
+              <input class="form-control" placeholder="Search (e.g., Ella, beach, safari)" v-model.trim="q"
+                @keydown.enter="go('explore')">
+>>>>>>> Stashed changes
+            </div>
+            <button class="btn btn-outline-brand" @click="openLogin()">
+              <i class="bi bi-person-circle me-1"></i>Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="container my-4">
+
+      <!-- HOME -->
+      <section v-if="route==='home'">
+        <div class="hero mb-4">
+          <div class="content text-white">
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge badge-soft"><i class="bi bi-stars me-1"></i>Curated Destinations</span>
+              <span class="badge badge-soft"><i class="bi bi-lightning-charge me-1"></i>Fast Trip Planner</span>
+              <span class="badge badge-soft"><i class="bi bi-geo me-1"></i>Interactive Map</span>
+            </div>
+            <div class="row align-items-center">
+              <div class="col-lg-7">
+                <h1 class="display-5 mb-3">Plan your Sri Lanka journey in minutes.</h1>
+                <p class="lead text-white-50 mb-4">
+<<<<<<< Updated upstream
+                  Discover beaches, heritage sites, hill country, and wildlife — then build your itinerary with one click.
+=======
+                  Discover beaches, heritage sites, hill country, and wildlife — then build your itinerary with one
+                  click.
+>>>>>>> Stashed changes
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <button class="btn btn-brand px-4 py-2" @click="go('explore')">
+                    Explore Destinations <i class="bi bi-arrow-right ms-1"></i>
+                  </button>
+                  <button class="btn btn-outline-light px-4 py-2" @click="go('planner')">
+                    Build Itinerary <i class="bi bi-calendar2-check ms-1"></i>
+                  </button>
+                </div>
+<<<<<<< Updated upstream
+=======
+                <div class="d-flex flex-wrap gap-2">
+                  <div class="card mt-4 p-3" style="max-width: 520px;">
+                    <div class="fw-bold mb-2">
+                      <i class="bi bi-calendar-event me-1"></i> Select your travel dates
+                    </div>
+
+                    <div class="row g-2">
+                      <div class="col-12 col-md-6">
+                        <label class="form-label small mb-1">Start date</label>
+                        <input type="date" class="form-control" v-model="startDate">
+                      </div>
+
+                      <div class="col-12 col-md-6">
+                        <label class="form-label small mb-1">End date</label>
+                        <input type="date" class="form-control" v-model="endDate">
+                      </div>
+                    </div>
+
+                    <div class="mt-2 small muted" v-if="startDate && endDate">
+                      ✅ Trip: <span class="fw-semibold">{{ startDate }}</span> → <span class="fw-semibold">{{ endDate
+                        }}</span>
+                    </div>
+
+                    <div class="mt-2 small text-danger" v-if="dateError">
+                      {{ dateError }}
+                    </div>
+                  </div>
+                </div>
+>>>>>>> Stashed changes
+              </div>
+              <div class="col-lg-5 mt-4 mt-lg-0">
+                <div class="row g-3">
+                  <div class="col-6">
+                    <div class="kpi">
+                      <div class="d-flex align-items-center gap-3">
+                        <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                        <div>
+                          <div class="fw-bold">Regions</div>
+                          <div class="muted">West • South • Central • East</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="kpi">
+                      <div class="d-flex align-items-center gap-3">
+                        <div class="icon"><i class="bi bi-cloud-sun"></i></div>
+                        <div>
+                          <div class="fw-bold">Seasonal</div>
+                          <div class="muted">Best-time tips</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="kpi">
+                      <div class="d-flex align-items-center gap-3">
+                        <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                        <div>
+                          <div class="fw-bold">Budget</div>
+                          <div class="muted">Low → Luxury</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="kpi">
+                      <div class="d-flex align-items-center gap-3">
+                        <div class="icon"><i class="bi bi-map"></i></div>
+                        <div>
+                          <div class="fw-bold">Map</div>
+                          <div class="muted">Pins & favorites</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="row g-3 mb-4">
+          <div class="col-6 col-md-4 col-lg-2" v-for="c in categories" :key="c.key">
+            <button class="card w-100 p-3 text-start" @click="quickCategory(c.key)" style="cursor:pointer;">
+              <div class="d-flex align-items-center gap-2">
+                <div class="icon"><i :class="c.icon"></i></div>
+                <div>
+                  <div class="fw-bold">{{c.label}}</div>
+                  <div class="muted small">{{c.hint}}</div>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Featured -->
+        <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-2">
+          <div>
+            <h2 class="section-title mb-1">Featured destinations</h2>
+            <div class="muted">Popular picks to start building your trip.</div>
+          </div>
+          <button class="btn btn-outline-brand" @click="go('explore')">
+            View all <i class="bi bi-arrow-right ms-1"></i>
+          </button>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-3" v-for="d in featuredDestinations" :key="d.id">
+            <div class="card h-100">
+              <img class="card-img-top" :src="d.image" :alt="d.name">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start gap-2">
+                  <div>
+                    <h5 class="fw-bold mb-1">{{d.name}}</h5>
+                    <div class="muted small"><i class="bi bi-geo-alt me-1"></i>{{d.region}}</div>
+                  </div>
+                  <span class="pill2"><i class="bi bi-star-fill me-1"></i>{{d.rating}}</span>
+                </div>
+
+                <p class="muted mt-2 mb-2 small">{{d.short}}</p>
+
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="pill" v-for="t in d.tags.slice(0,2)" :key="t">{{t}}</span>
+                </div>
+
+                <div class="d-flex gap-2">
+                  <button class="btn btn-brand w-50" @click="openDetails(d)">Details</button>
+                  <button class="btn btn-outline-brand w-50" @click="addToPlan(d)">
+                    <i class="bi bi-plus-circle me-1"></i>Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seasonal banner -->
+        <div class="card mt-4 p-3 p-md-4">
+          <div class="row align-items-center g-3">
+            <div class="col-md-8">
+              <h4 class="fw-bold mb-1"><i class="bi bi-sunrise me-2 text-warning"></i>Seasonal travel highlight</h4>
+              <div class="muted">
+                Use filters to match the best regions for your travel month and interests.
+                (This is a frontend preview — you can later connect real weather APIs.)
+              </div>
+            </div>
+            <div class="col-md-4 text-md-end">
+              <button class="btn btn-outline-brand" @click="go('explore')">
+                Try filters <i class="bi bi-sliders ms-1"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPLORE -->
+      <section v-if="route==='explore'">
+        <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-3">
+          <div>
+            <h2 class="section-title mb-1">Explore Sri Lanka</h2>
+            <div class="muted">Search, filter, and add places to your itinerary.</div>
+          </div>
+          <div class="d-flex gap-2">
+            <select class="form-select" style="max-width: 220px;" v-model="sortBy">
+              <option value="popular">Sort: Popular</option>
+              <option value="rating">Sort: Highest Rated</option>
+              <option value="budget">Sort: Budget (Low→High)</option>
+              <option value="name">Sort: Name (A→Z)</option>
+            </select>
+            <button class="btn btn-outline-brand" @click="resetFilters()">
+              Reset <i class="bi bi-arrow-counterclockwise ms-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-lg-3">
+            <div class="card p-3 filters">
+              <div class="fw-bold mb-2"><i class="bi bi-funnel me-1"></i>Filters</div>
+
+              <label class="small fw-semibold">Region</label>
+              <select class="form-select mb-2" v-model="filters.region">
+                <option value="">All</option>
+                <option v-for="r in regions" :key="r" :value="r">{{r}}</option>
+              </select>
+
+              <label class="small fw-semibold">Activity</label>
+              <select class="form-select mb-2" v-model="filters.activity">
+                <option value="">All</option>
+                <option v-for="a in activities" :key="a" :value="a">{{a}}</option>
+              </select>
+
+              <label class="small fw-semibold">Budget</label>
+              <select class="form-select mb-2" v-model="filters.budget">
+                <option value="">All</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="Luxury">Luxury</option>
+              </select>
+
+              <label class="small fw-semibold">Duration</label>
+              <select class="form-select mb-3" v-model="filters.duration">
+                <option value="">All</option>
+                <option value="1-2 days">1–2 days</option>
+                <option value="3-4 days">3–4 days</option>
+                <option value="5+ days">5+ days</option>
+              </select>
+
+              <div class="small fw-semibold mb-2">Quick tags</div>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-sm btn-outline-brand" @click="applyTag('Family')">Family</button>
+                <button class="btn btn-sm btn-outline-brand" @click="applyTag('Adventure')">Adventure</button>
+                <button class="btn btn-sm btn-outline-brand" @click="applyTag('Culture')">Culture</button>
+                <button class="btn btn-sm btn-outline-brand" @click="applyTag('Beach')">Beach</button>
+                <button class="btn btn-sm btn-outline-brand" @click="applyTag('Wildlife')">Wildlife</button>
+              </div>
+
+              <hr class="my-3">
+              <div class="muted small">
+                Tip: Use the top search bar to quickly find places like “Ella”, “Galle”, “Sigiriya”.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-9">
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4" v-for="d in filteredDestinations" :key="d.id">
+                <div class="card h-100">
+                  <img class="card-img-top" :src="d.image" :alt="d.name">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start gap-2">
+                      <div>
+                        <h5 class="fw-bold mb-1">{{d.name}}</h5>
+                        <div class="muted small">
+                          <i class="bi bi-geo-alt me-1"></i>{{d.region}} •
+                          <i class="bi bi-activity ms-2 me-1"></i>{{d.activity}}
+                        </div>
+                      </div>
+                      <span class="pill2"><i class="bi bi-star-fill me-1"></i>{{d.rating}}</span>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-2 my-2">
+                      <span class="pill">{{d.budget}}</span>
+                      <span class="pill2">{{d.duration}}</span>
+                    </div>
+
+                    <p class="muted small mb-3">{{d.short}}</p>
+
+                    <div class="d-flex gap-2">
+                      <button class="btn btn-brand w-50" @click="openDetails(d)">Details</button>
+                      <button class="btn btn-outline-brand w-50" @click="addToPlan(d)">
+                        <i class="bi bi-plus-circle me-1"></i>Add
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div v-if="filteredDestinations.length===0" class="col-12">
+                <div class="card p-4 text-center">
+                  <div class="fw-bold mb-1">No results found</div>
+                  <div class="muted">Try changing filters or search keywords.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mt-3 p-3">
+              <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                <div>
+                  <div class="fw-bold"><i class="bi bi-bookmark-heart me-1 text-danger"></i>Your plan</div>
+                  <div class="muted small">{{plan.length}} place(s) added</div>
+                </div>
+                <button class="btn btn-brand" @click="go('planner')" :disabled="plan.length===0">
+                  Go to planner <i class="bi bi-arrow-right ms-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAP -->
+      <section v-if="route==='map'">
+        <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-3">
+          <div>
+            <h2 class="section-title mb-1">Interactive Map</h2>
+            <div class="muted">Pins show top destinations. Click pins to see details.</div>
+          </div>
+          <button class="btn btn-outline-brand" @click="centerMap()">
+            Center map <i class="bi bi-crosshair ms-1"></i>
+          </button>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-lg-8">
+            <div id="map"></div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card p-3">
+              <div class="fw-bold mb-2"><i class="bi bi-pin-map me-1"></i>Map legend</div>
+              <div class="muted small mb-2">Pins are based on sample data coordinates.</div>
+
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="pill2">Click a pin</span>
+                <span class="muted small">to open details</span>
+              </div>
+
+              <hr>
+
+              <div class="fw-bold mb-2">Quick add</div>
+              <div class="d-grid gap-2">
+<<<<<<< Updated upstream
+                <button class="btn btn-outline-brand" v-for="d in destinations.slice(0,5)" :key="d.id" @click="addToPlan(d)">
+=======
+                <button class="btn btn-outline-brand" v-for="d in destinations.slice(0,5)" :key="d.id"
+                  @click="addToPlan(d)">
+>>>>>>> Stashed changes
+                  <i class="bi bi-plus-circle me-1"></i>{{d.name}}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PLANNER -->
+      <section v-if="route==='planner'">
+        <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-3">
+          <div>
+            <h2 class="section-title mb-1">Trip Planner</h2>
+            <div class="muted">Drag places to reorder. Add notes and export (UI preview).</div>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-outline-brand" @click="autoPlan()" :disabled="plan.length===0">
+              Auto-suggest <i class="bi bi-magic ms-1"></i>
+            </button>
+            <button class="btn btn-brand" @click="fakeExport()" :disabled="plan.length===0">
+              Export <i class="bi bi-file-earmark-arrow-down ms-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-lg-5">
+            <div class="card p-3">
+              <div class="d-flex align-items-center justify-content-between">
+                <div>
+                  <div class="fw-bold"><i class="bi bi-list-check me-1"></i>Selected places</div>
+                  <div class="drag-hint">Drag using the handle <i class="bi bi-grip-vertical"></i></div>
+                </div>
+                <button class="btn btn-sm btn-outline-brand" @click="clearPlan()" :disabled="plan.length===0">
+                  Clear
+                </button>
+              </div>
+
+              <div class="mt-3">
+                <div v-if="plan.length===0" class="text-center p-4">
+                  <div class="fw-bold mb-1">Your plan is empty</div>
+                  <div class="muted mb-3">Go to Explore and add some destinations.</div>
+                  <button class="btn btn-brand" @click="go('explore')">Explore now</button>
+                </div>
+
+                <div v-else>
+                  <div class="list-group">
+<<<<<<< Updated upstream
+                    <div class="list-group-item" v-for="(p, idx) in plan" :key="p.id"
+                         draggable="true"
+                         @dragstart="onDragStart(idx)"
+                         @dragover.prevent
+                         @drop="onDrop(idx)">
+=======
+                    <div class="list-group-item" v-for="(p, idx) in plan" :key="p.id" draggable="true"
+                      @dragstart="onDragStart(idx)" @dragover.prevent @drop="onDrop(idx)">
+>>>>>>> Stashed changes
+                      <div class="d-flex align-items-start gap-2">
+                        <div class="text-muted" style="cursor:grab;">
+                          <i class="bi bi-grip-vertical"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                          <div class="d-flex justify-content-between gap-2">
+                            <div class="fw-bold">{{idx+1}}. {{p.name}}</div>
+                            <button class="btn btn-sm btn-outline-danger" @click="removeFromPlan(p.id)">
+                              <i class="bi bi-x-lg"></i>
+                            </button>
+                          </div>
+                          <div class="muted small">
+                            <i class="bi bi-geo-alt me-1"></i>{{p.region}} •
+                            <i class="bi bi-activity ms-2 me-1"></i>{{p.activity}} •
+                            <i class="bi bi-clock ms-2 me-1"></i>{{p.duration}}
+                          </div>
+                          <div class="mt-2">
+<<<<<<< Updated upstream
+                            <input class="form-control form-control-sm" placeholder="Add a note (e.g., train ride, sunrise...)"
+                                   v-model="p.note">
+=======
+                            <input class="form-control form-control-sm"
+                              placeholder="Add a note (e.g., train ride, sunrise...)" v-model="p.note">
+>>>>>>> Stashed changes
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card mt-3 p-3 bg-light">
+                    <div class="fw-bold mb-1"><i class="bi bi-info-circle me-1"></i>Itinerary preview</div>
+<<<<<<< Updated upstream
+                    <div class="muted small">This is a frontend-only preview. Later you can connect a distance/route API.</div>
+=======
+                    <div class="muted small">This is a frontend-only preview. Later you can connect a distance/route
+                      API.</div>
+>>>>>>> Stashed changes
+                    <ol class="mt-2 mb-0">
+                      <li v-for="p in plan" :key="p.id">
+                        {{p.name}} <span class="muted">— {{p.note || "No note"}}</span>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="card p-3">
+              <div class="fw-bold mb-2"><i class="bi bi-calendar3 me-1"></i>Day-by-day timeline (UI)</div>
+              <div class="muted small mb-3">We split your selected places into days automatically for the preview.</div>
+
+              <div v-if="plan.length===0" class="text-center p-4 muted">
+                Add destinations to generate a timeline.
+              </div>
+
+              <div v-else>
+                <div class="row g-3">
+                  <div class="col-md-6" v-for="(day, i) in timeline" :key="i">
+                    <div class="card p-3 h-100">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <div class="fw-bold">Day {{i+1}}</div>
+                        <span class="pill2">{{day.length}} stop(s)</span>
+                      </div>
+                      <ul class="mb-0">
+                        <li v-for="s in day" :key="s.id">
+                          <span class="fw-semibold">{{s.name}}</span>
+                          <span class="muted"> — {{s.activity}}</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card mt-3 p-3">
+                  <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                    <div>
+                      <div class="fw-bold">Estimated trip style</div>
+                      <div class="muted small">{{tripStyle}}</div>
+                    </div>
+                    <button class="btn btn-outline-brand" @click="go('map')">
+                      View on map <i class="bi bi-geo-alt ms-1"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="card mt-3 p-3">
+<<<<<<< Updated upstream
+              <div class="fw-bold mb-1"><i class="bi bi-lightbulb me-1 text-warning"></i>Smart suggestions (preview)</div>
+=======
+              <div class="fw-bold mb-1"><i class="bi bi-lightbulb me-1 text-warning"></i>Smart suggestions (preview)
+              </div>
+>>>>>>> Stashed changes
+              <div class="muted small mb-2">Based on what you added, you might also like:</div>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-sm btn-outline-brand" v-for="s in suggestions" :key="s.id" @click="addToPlan(s)">
+                  <i class="bi bi-plus-circle me-1"></i>{{s.name}}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIPS -->
+      <section v-if="route==='tips'">
+        <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-3">
+          <div>
+            <h2 class="section-title mb-1">Travel Tips & Safety</h2>
+            <div class="muted">Practical guidance for a smoother Sri Lanka trip (UI content).</div>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4" v-for="t in tips" :key="t.title">
+            <div class="card p-3 h-100">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <div class="icon"><i :class="t.icon"></i></div>
+                <div class="fw-bold">{{t.title}}</div>
+              </div>
+              <ul class="muted mb-0">
+                <li v-for="line in t.points" :key="line">{{line}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-3 p-3">
+          <div class="fw-bold mb-1"><i class="bi bi-exclamation-triangle me-1 text-danger"></i>Emergency (example)</div>
+          <div class="muted">
+            This section can later be connected to real emergency numbers and official travel alerts.
+            For now, it demonstrates the UI layout for safety notices.
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <div class="mt-4 footer text-center pb-4">
+        <div>© {{new Date().getFullYear()}} Sri Lanka Travel Information System (Frontend Preview)</div>
+        <div class="small">Built with Vue.js + Bootstrap (UI-only, sample data)</div>
+      </div>
+
+    </main>
+
+    <!-- DETAILS MODAL -->
+    <div class="modal fade" id="detailsModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content" style="border-radius:18px;">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title fw-bold mb-0">{{selected?.name || ''}}</h5>
+              <div class="muted small">
+                <i class="bi bi-geo-alt me-1"></i>{{selected?.region}} •
+                <i class="bi bi-activity ms-2 me-1"></i>{{selected?.activity}} •
+                <i class="bi bi-star-fill ms-2 me-1 text-warning"></i>{{selected?.rating}}
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body" v-if="selected">
+<<<<<<< Updated upstream
+            <img :src="selected.image" :alt="selected.name" class="w-100 mb-3" style="border-radius:16px; height:260px; object-fit:cover;">
+=======
+            <img :src="selected.image" :alt="selected.name" class="w-100 mb-3"
+              style="border-radius:16px; height:260px; object-fit:cover;">
+>>>>>>> Stashed changes
+            <div class="row g-3">
+              <div class="col-md-8">
+                <div class="fw-bold">Overview</div>
+                <p class="muted">{{selected.description}}</p>
+
+                <div class="fw-bold">Top things to do</div>
+                <ul class="muted">
+                  <li v-for="x in selected.thingsToDo" :key="x">{{x}}</li>
+                </ul>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card p-3 bg-light">
+                  <div class="fw-bold mb-2">Quick info</div>
+                  <div class="small"><span class="fw-semibold">Budget:</span> {{selected.budget}}</div>
+                  <div class="small"><span class="fw-semibold">Typical duration:</span> {{selected.duration}}</div>
+                  <div class="small"><span class="fw-semibold">Best time:</span> {{selected.bestTime}}</div>
+                  <div class="small"><span class="fw-semibold">Entry / costs:</span> {{selected.costs}}</div>
+                  <hr>
+                  <div class="fw-bold mb-2">Tags</div>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="pill" v-for="t in selected.tags" :key="t">{{t}}</span>
+                  </div>
+                </div>
+
+                <div class="mt-3 d-grid gap-2">
+                  <button class="btn btn-brand" @click="addToPlan(selected)">
+                    <i class="bi bi-plus-circle me-1"></i>Add to plan
+                  </button>
+                  <button class="btn btn-outline-brand" @click="go('map'); closeModal('detailsModal')">
+                    View on map <i class="bi bi-geo-alt ms-1"></i>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-outline-brand" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGIN MODAL -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" style="border-radius:18px;">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold">Login (UI preview)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="muted small mb-3">
+              This is a frontend-only mock login screen (no backend). Great for preview/demo.
+            </div>
+            <label class="small fw-semibold">Email</label>
+            <input class="form-control mb-2" placeholder="you@example.com" v-model="login.email">
+            <label class="small fw-semibold">Password</label>
+            <input class="form-control mb-3" placeholder="••••••••" type="password" v-model="login.password">
+            <button class="btn btn-brand w-100" @click="fakeLogin()">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+      <div id="toast" class="toast align-items-center text-bg-dark border-0" role="alert">
+        <div class="d-flex">
+          <div class="toast-body">{{toastMsg}}</div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+<<<<<<< Updated upstream
+{% endverbatim %}
+=======
+  {% endverbatim %}
+>>>>>>> Stashed changes
+
+  <!-- Vue 3 -->
+  <script src="https://unpkg.com/vue@3.4.38/dist/vue.global.prod.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Leaflet -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<<<<<<< Updated upstream
+{% verbatim %}
+=======
+  {% verbatim %}
+>>>>>>> Stashed changes
+  <script>
+    const { createApp, computed, watch, nextTick } = Vue;
+
+    createApp({
+<<<<<<< Updated upstream
+      data(){
+        return {
+          route: 'home',
+=======
+      data() {
+        return {
+          route: 'home',
+          startDate: "",
+          endDate: "",
+          dateError: "",
+>>>>>>> Stashed changes
+          q: '',
+          sortBy: 'popular',
+          filters: {
+            region: '',
+            activity: '',
+            budget: '',
+            duration: '',
+            tag: ''
+          },
+          selected: null,
+          plan: [],
+          dragIndex: null,
+          toastMsg: '',
+          map: null,
+          mapMarkers: [],
+<<<<<<< Updated upstream
+          login: { email:'', password:'' },
+
+          categories: [
+            { key:'Beach', label:'Beaches', hint:'Sun & surf', icon:'bi bi-water' },
+            { key:'Culture', label:'Culture', hint:'Heritage', icon:'bi bi-bank' },
+            { key:'Hill', label:'Hill Country', hint:'Tea & views', icon:'bi bi-cloud-haze2' },
+            { key:'Wildlife', label:'Wildlife', hint:'Safaris', icon:'bi bi-binoculars' },
+            { key:'Food', label:'Food', hint:'Local taste', icon:'bi bi-egg-fried' },
+            { key:'Adventure', label:'Adventure', hint:'Hike & zip', icon:'bi bi-signpost-split' },
+          ],
+
+          tips: [
+            { title:'Currency & payments', icon:'bi bi-cash-coin', points:[
+              'Carry some cash for small shops and tuk-tuks.',
+              'Use official exchange points when possible.',
+              'Keep small notes for quick payments.'
+            ]},
+            { title:'Local etiquette', icon:'bi bi-people', points:[
+              'Dress modestly at temples (shoulders/knees covered).',
+              'Remove shoes/hats when entering religious sites.',
+              'Ask before photographing people.'
+            ]},
+            { title:'Transport tips', icon:'bi bi-truck', points:[
+              'Trains are scenic in hill country (book early).',
+              'Use reputable tuk-tuks; agree price beforehand.',
+              'Allow extra time for traffic in cities.'
+            ]},
+            { title:'Weather & seasons', icon:'bi bi-cloud-sun', points:[
+              'Coasts can have different weather at the same time.',
+              'Pack a light rain layer for sudden showers.',
+              'Check conditions before hikes/safaris.'
+            ]},
+            { title:'Safety', icon:'bi bi-shield-check', points:[
+              'Keep valuables secure in crowded places.',
+              'Use sunscreen and stay hydrated.',
+              'Follow park rules in wildlife areas.'
+            ]},
+            { title:'Connectivity', icon:'bi bi-wifi', points:[
+              'A local SIM can be cost-effective.',
+              'Download offline maps for remote areas.',
+              'Save emergency contacts in your phone.'
+            ]},
+=======
+          login: { email: '', password: '' },
+
+          categories: [
+            { key: 'Beach', label: 'Beaches', hint: 'Sun & surf', icon: 'bi bi-water' },
+            { key: 'Culture', label: 'Culture', hint: 'Heritage', icon: 'bi bi-bank' },
+            { key: 'Hill', label: 'Hill Country', hint: 'Tea & views', icon: 'bi bi-cloud-haze2' },
+            { key: 'Wildlife', label: 'Wildlife', hint: 'Safaris', icon: 'bi bi-binoculars' },
+            { key: 'Food', label: 'Food', hint: 'Local taste', icon: 'bi bi-egg-fried' },
+            { key: 'Adventure', label: 'Adventure', hint: 'Hike & zip', icon: 'bi bi-signpost-split' },
+          ],
+
+          tips: [
+            {
+              title: 'Currency & payments', icon: 'bi bi-cash-coin', points: [
+                'Carry some cash for small shops and tuk-tuks.',
+                'Use official exchange points when possible.',
+                'Keep small notes for quick payments.'
+              ]
+            },
+            {
+              title: 'Local etiquette', icon: 'bi bi-people', points: [
+                'Dress modestly at temples (shoulders/knees covered).',
+                'Remove shoes/hats when entering religious sites.',
+                'Ask before photographing people.'
+              ]
+            },
+            {
+              title: 'Transport tips', icon: 'bi bi-truck', points: [
+                'Trains are scenic in hill country (book early).',
+                'Use reputable tuk-tuks; agree price beforehand.',
+                'Allow extra time for traffic in cities.'
+              ]
+            },
+            {
+              title: 'Weather & seasons', icon: 'bi bi-cloud-sun', points: [
+                'Coasts can have different weather at the same time.',
+                'Pack a light rain layer for sudden showers.',
+                'Check conditions before hikes/safaris.'
+              ]
+            },
+            {
+              title: 'Safety', icon: 'bi bi-shield-check', points: [
+                'Keep valuables secure in crowded places.',
+                'Use sunscreen and stay hydrated.',
+                'Follow park rules in wildlife areas.'
+              ]
+            },
+            {
+              title: 'Connectivity', icon: 'bi bi-wifi', points: [
+                'A local SIM can be cost-effective.',
+                'Download offline maps for remote areas.',
+                'Save emergency contacts in your phone.'
+              ]
+            },
+>>>>>>> Stashed changes
+          ],
+
+          destinations: [
+            {
+              id: 1,
+<<<<<<< Updated upstream
+              name: 'Sigiriya Rock Fortress',
+              region: 'Central',
+              activity: 'Culture',
+              budget: 'Medium',
+              duration: '1-2 days',
+              rating: 4.8,
+              tags: ['Culture','UNESCO','Sunrise'],
+              bestTime: 'Jan – Apr',
+              costs: 'Entry fees vary (site ticket)',
+              lat: 7.9570, lng: 80.7603,
+              image: 'https://images.unsplash.com/photo-1602751271158-14c7f1d8d1d1?auto=format&fit=crop&w=1600&q=70',
+              short: 'Iconic rock fortress with ancient frescoes and panoramic views.',
+              description: 'Sigiriya is one of Sri Lanka’s most famous heritage sites, known for its rock fortress, landscaped gardens, and breathtaking summit views.',
+              thingsToDo: [
+                'Climb early for cooler weather and sunrise views',
+                'Explore the water gardens and boulder gardens',
+                'Visit nearby Pidurangala Rock viewpoint'
+              ]
+            },
+            {
+              id: 2,
+              name: 'Galle Fort',
+              region: 'South',
+              activity: 'Culture',
+              budget: 'Medium',
+              duration: '1-2 days',
+              rating: 4.7,
+              tags: ['Culture','UNESCO','Walkable'],
+              bestTime: 'Dec – Mar',
+              costs: 'Mostly free to walk; museum tickets optional',
+              lat: 6.0329, lng: 80.2168,
+              image: 'https://images.unsplash.com/photo-1625050631148-fd964f2f2f94?auto=format&fit=crop&w=1600&q=70',
+              short: 'Historic Dutch fort with cafes, boutiques, and sunset walls.',
+              description: 'Galle Fort blends colonial architecture with modern seaside charm. Perfect for walking, shopping, and sunsets.',
+              thingsToDo: [
+                'Walk the ramparts at sunset',
+                'Visit lighthouse and small museums',
+                'Try local seafood and cafes inside the fort'
+              ]
+            },
+            {
+              id: 3,
+              name: 'Ella & Nine Arches Bridge',
+              region: 'Central',
+              activity: 'Hill',
+              budget: 'Low',
+              duration: '3-4 days',
+              rating: 4.8,
+              tags: ['Hill Country','Scenic','Hiking'],
+              bestTime: 'Feb – Jun',
+              costs: 'Low cost hikes; train tickets vary',
+              lat: 6.8650, lng: 81.0466,
+              image: 'https://images.unsplash.com/photo-1616692014741-3e55b8e9b6fd?auto=format&fit=crop&w=1600&q=70',
+              short: 'Tea country views, hikes, and the famous bridge.',
+              description: 'Ella is a relaxed hill town with great hikes, tea plantations, and scenic train rides.',
+              thingsToDo: [
+                'See the train at Nine Arches Bridge',
+                'Hike Little Adam’s Peak',
+                'Visit a tea factory and plantations'
+              ]
+            },
+            {
+              id: 4,
+              name: 'Yala National Park',
+              region: 'South',
+              activity: 'Wildlife',
+              budget: 'Luxury',
+              duration: '1-2 days',
+              rating: 4.6,
+              tags: ['Wildlife','Safari','Leopards'],
+              bestTime: 'Feb – Jul',
+              costs: 'Safari jeeps and tickets can be higher',
+              lat: 6.3667, lng: 81.5167,
+              image: 'https://images.unsplash.com/photo-1580554530778-ca36943938b2?auto=format&fit=crop&w=1600&q=70',
+              short: 'Top safari destination known for leopards and elephants.',
+              description: 'Yala is Sri Lanka’s most famous national park. Early morning safaris are best for wildlife sightings.',
+              thingsToDo: [
+                'Book an early morning safari',
+                'Bring binoculars and a camera',
+                'Follow park rules for safety'
+              ]
+            },
+            {
+              id: 5,
+              name: 'Mirissa Beach',
+              region: 'South',
+              activity: 'Beach',
+              budget: 'Medium',
+              duration: '3-4 days',
+              rating: 4.5,
+              tags: ['Beach','Relax','Whales'],
+              bestTime: 'Dec – Apr',
+              costs: 'Beach is free; boat tours optional',
+              lat: 5.9463, lng: 80.4583,
+              image: 'https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1600&q=70',
+              short: 'Golden beaches and a lively coastal vibe.',
+              description: 'Mirissa is popular for relaxing beach days, cafes, and seasonal whale watching trips.',
+              thingsToDo: [
+                'Relax on the beach and enjoy sunsets',
+                'Try local seafood restaurants',
+                'Seasonal whale watching (if available)'
+              ]
+            },
+            {
+              id: 6,
+              name: 'Arugam Bay',
+              region: 'East',
+              activity: 'Adventure',
+              budget: 'Low',
+              duration: '5+ days',
+              rating: 4.6,
+              tags: ['Surf','Beach','Adventure'],
+              bestTime: 'May – Sep',
+              costs: 'Surf rentals/lessons vary; stays can be budget-friendly',
+              lat: 6.8402, lng: 81.8360,
+              image: 'https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&w=1600&q=70',
+              short: 'Sri Lanka’s surf capital with chill beach vibes.',
+              description: 'Arugam Bay is best known for surfing, laid-back stays, and beach culture.',
+              thingsToDo: [
+                'Take surf lessons or rent a board',
+                'Explore nearby lagoons and viewpoints',
+                'Enjoy the relaxed beach nightlife'
+              ]
+            },
+            {
+              id: 7,
+              name: 'Kandy & Temple of the Tooth',
+              region: 'Central',
+              activity: 'Culture',
+              budget: 'Medium',
+              duration: '1-2 days',
+              rating: 4.6,
+              tags: ['Culture','Temple','City'],
+              bestTime: 'Jan – Apr',
+              costs: 'Temple tickets vary; city travel moderate',
+              lat: 7.2906, lng: 80.6337,
+              image: 'https://images.unsplash.com/photo-1629886102444-1fa3e3c2f984?auto=format&fit=crop&w=1600&q=70',
+              short: 'Cultural capital with a sacred temple and lakeside walks.',
+              description: 'Kandy is a key cultural city featuring the Temple of the Tooth and scenic surroundings.',
+              thingsToDo: [
+                'Visit the Temple of the Tooth',
+                'Walk around Kandy Lake',
+                'Watch a cultural dance show'
+              ]
+            },
+            {
+              id: 8,
+              name: 'Colombo City Highlights',
+              region: 'West',
+              activity: 'Food',
+              budget: 'Low',
+              duration: '1-2 days',
+              rating: 4.2,
+              tags: ['Food','City','Markets'],
+              bestTime: 'All year',
+              costs: 'Low-to-medium depending on choices',
+              lat: 6.9271, lng: 79.8612,
+              image: 'https://images.unsplash.com/photo-1616505739585-4a4d0b9f8a5e?auto=format&fit=crop&w=1600&q=70',
+              short: 'Markets, street food, and modern city energy.',
+              description: 'Colombo offers food experiences, shopping, and a modern city feel — ideal for a short stop.',
+              thingsToDo: [
+                'Try street food and cafes',
+                'Visit markets and shopping streets',
+                'Explore the seaside promenade'
+              ]
+            }
+=======
+              name: "Kandy",
+              region: "Central",
+              activity: "Culture",
+              budget: "Medium",
+              duration: "1-2 days",
+              rating: 4.6,
+              tags: ["Culture", "Temple", "City"],
+              bestTime: "Dec – Apr",
+              costs: "Temple/museum tickets vary; local transport low–medium",
+              lat: 7.2906,
+              lng: 80.6337,
+              image: "https://images.unsplash.com/photo-1546707012-8b19b50a498b?auto=format&fit=crop&w=1600&q=70",
+              short: "Sri Lanka’s cultural capital with temples and lakeside walks.",
+              description:
+                "A lively hill-country city known for heritage sites, traditional performances, and a scenic lake at the center of town.",
+              thingsToDo: ["Temple visit", "Lake walk", "Cultural show", "Viewpoints"],
+            },
+            {
+              id: 2,
+              name: "Dambulla",
+              region: "Central",
+              activity: "Culture",
+              budget: "Low",
+              duration: "1-2 days",
+              rating: 4.5,
+              tags: ["Culture", "Caves", "Heritage"],
+              bestTime: "Dec – Apr",
+              costs: "Site tickets vary; tuk-tuk/day trips low–medium",
+              lat: 7.8567,
+              lng: 80.6492,
+              image: "https://images.unsplash.com/photo-1602751271158-14c7f1d8d1d1?auto=format&fit=crop&w=1600&q=70",
+              short: "Historic cave-temple town near major cultural triangle sites.",
+              description:
+                "A convenient base to explore cultural triangle highlights, with iconic cave temples and easy access to nearby attractions.",
+              thingsToDo: ["Cave temple tour", "Local market", "Day trip to nearby sites"],
+            },
+            {
+              id: 3,
+              name: "Mannar",
+              region: "North",
+              activity: "Culture",
+              budget: "Low",
+              duration: "1-2 days",
+              rating: 4.2,
+              tags: ["North", "History", "Coastal"],
+              bestTime: "May – Sep",
+              costs: "Low; transport depends on route",
+              lat: 8.9810,
+              lng: 79.9040,
+              image: "https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1600&q=70",
+              short: "A quiet northern coastal area with a calm, local feel.",
+              description:
+                "A relaxed stop in the north with coastal scenery, local life, and historical interest—best enjoyed slowly.",
+              thingsToDo: ["Coastal walk", "Local food", "Explore nearby islands/areas"],
+            },
+            {
+              id: 4,
+              name: "Jaffna",
+              region: "North",
+              activity: "Food",
+              budget: "Low",
+              duration: "3-4 days",
+              rating: 4.5,
+              tags: ["North", "Food", "Culture"],
+              bestTime: "May – Sep",
+              costs: "Low–medium depending on transport and stays",
+              lat: 9.6615,
+              lng: 80.0255,
+              image: "https://images.unsplash.com/photo-1616505739585-4a4d0b9f8a5e?auto=format&fit=crop&w=1600&q=70",
+              short: "Northern city famous for unique culture and cuisine.",
+              description:
+                "A vibrant northern hub where you can experience distinctive local culture, architecture, and a strong food scene.",
+              thingsToDo: ["Food tour", "Temples/landmarks", "Markets", "Day trips nearby"],
+            },
+            {
+              id: 5,
+              name: "Bentota",
+              region: "West",
+              activity: "Beach",
+              budget: "Medium",
+              duration: "3-4 days",
+              rating: 4.4,
+              tags: ["Beach", "Relax", "Water"],
+              bestTime: "Dec – Mar",
+              costs: "Beach free; water activities vary",
+              lat: 6.4211,
+              lng: 79.9987,
+              image: "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&w=1600&q=70",
+              short: "West-coast beach destination with water activities.",
+              description:
+                "A classic west-coast getaway—great for beach time, relaxing hotels, and water-based activities.",
+              thingsToDo: ["Beach day", "Boat ride", "Water sports", "Sunset"],
+            },
+            {
+              id: 6,
+              name: "Chilaw",
+              region: "West",
+              activity: "Food",
+              budget: "Low",
+              duration: "1-2 days",
+              rating: 4.1,
+              tags: ["Coastal", "Local", "Quick Stop"],
+              bestTime: "Dec – Mar",
+              costs: "Low",
+              lat: 7.5758,
+              lng: 79.7953,
+              image: "https://images.unsplash.com/photo-1625050631148-fd964f2f2f94?auto=format&fit=crop&w=1600&q=70",
+              short: "A simple coastal stop with local life and seafood.",
+              description:
+                "A practical stop on the west coast—good for a short break, local meals, and a slower coastal vibe.",
+              thingsToDo: ["Try seafood", "Coastal walk", "Market visit"],
+            },
+            {
+              id: 7,
+              name: "Pasikudah",
+              region: "East",
+              activity: "Beach",
+              budget: "Medium",
+              duration: "3-4 days",
+              rating: 4.6,
+              tags: ["Beach", "Calm Water", "Relax"],
+              bestTime: "May – Sep",
+              costs: "Resorts vary; beach access usually free",
+              lat: 7.9350,
+              lng: 81.5530,
+              image: "https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1600&q=70",
+              short: "Shallow, calm waters—ideal for easy swimming days.",
+              description:
+                "Known for gentle waves and warm, shallow water—great for families and relaxed beach stays.",
+              thingsToDo: ["Swimming", "Sunset stroll", "Beach cafes", "Relax"],
+            },
+            {
+              id: 8,
+              name: "Weligama",
+              region: "South",
+              activity: "Beach",
+              budget: "Medium",
+              duration: "3-4 days",
+              rating: 4.5,
+              tags: ["Beach", "Surf", "Cafe"],
+              bestTime: "Dec – Apr",
+              costs: "Surf lessons/rentals vary; stays medium",
+              lat: 5.9750,
+              lng: 80.4290,
+              image: "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&w=1600&q=70",
+              short: "Beginner-friendly surf beach with relaxed coastal vibes.",
+              description:
+                "A popular south-coast beach town with surfing, cafes, and easygoing evenings by the sea.",
+              thingsToDo: ["Surfing", "Beach day", "Sunset", "Cafe hopping"],
+            },
+            {
+              id: 9,
+              name: "Tangalle",
+              region: "South",
+              activity: "Beach",
+              budget: "Medium",
+              duration: "3-4 days",
+              rating: 4.4,
+              tags: ["Beach", "Quiet", "Relax"],
+              bestTime: "Dec – Apr",
+              costs: "Medium; depends on accommodation",
+              lat: 6.0240,
+              lng: 80.7940,
+              image: "https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1600&q=70",
+              short: "Quieter beaches and a slower pace in the deep south.",
+              description:
+                "A calmer alternative to busier beach towns—great for long beach walks and peaceful stays.",
+              thingsToDo: ["Beach walk", "Sunset", "Local restaurants", "Relax"],
+            },
+            {
+              id: 10,
+              name: "Colombo",
+              region: "West",
+              activity: "Food",
+              budget: "Low",
+              duration: "1-2 days",
+              rating: 4.2,
+              tags: ["City", "Food", "Markets"],
+              bestTime: "All year",
+              costs: "Low–medium depending on activities",
+              lat: 6.9271,
+              lng: 79.8612,
+              image: "https://images.unsplash.com/photo-1616505739585-4a4d0b9f8a5e?auto=format&fit=crop&w=1600&q=70",
+              short: "Capital city with street food, shopping, and coastal walks.",
+              description:
+                "A fast-moving city for food, shopping, and short cultural stops—ideal for a quick start or end to a trip.",
+              thingsToDo: ["Street food", "Markets", "Seaside walk", "Museums (optional)"],
+            },
+            {
+              id: 11,
+              name: "Negombo",
+              region: "West",
+              activity: "Beach",
+              budget: "Low",
+              duration: "1-2 days",
+              rating: 4.1,
+              tags: ["Beach", "Lagoon", "Airport Nearby"],
+              bestTime: "Dec – Mar",
+              costs: "Low",
+              lat: 7.2083,
+              lng: 79.8358,
+              image: "https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1600&q=70",
+              short: "Convenient beach stop near the airport with lagoon vibes.",
+              description:
+                "A common first/last night destination—easy logistics, beach access, and relaxed lagoon areas.",
+              thingsToDo: ["Beach walk", "Lagoon boat ride", "Seafood dinner"],
+            },
+            {
+              id: 12,
+              name: "Hambantota",
+              region: "South",
+              activity: "Adventure",
+              budget: "Medium",
+              duration: "1-2 days",
+              rating: 4.2,
+              tags: ["South", "Nature", "Road Trip"],
+              bestTime: "Dec – Apr",
+              costs: "Medium; depends on transport and stops",
+              lat: 6.1241,
+              lng: 81.1185,
+              image: "https://images.unsplash.com/photo-1580554530778-ca36943938b2?auto=format&fit=crop&w=1600&q=70",
+              short: "A southern hub for nature stops and onward travel.",
+              description:
+                "A practical southern base for exploring the region with open landscapes and nearby nature-oriented activities.",
+              thingsToDo: ["Nature stops", "Coastal views", "Day trips nearby"],
+            },
+            {
+              id: 13,
+              name: "Mirissa",
+              region: "South",
+              activity: "Beach",
+              budget: "Medium",
+              duration: "3-4 days",
+              rating: 4.5,
+              tags: ["Beach", "Relax", "Sunset"],
+              bestTime: "Dec – Apr",
+              costs: "Boat trips optional; stays medium",
+              lat: 5.9463,
+              lng: 80.4583,
+              image: "https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1600&q=70",
+              short: "Golden beach days with a lively but relaxed vibe.",
+              description:
+                "A popular beach town for sunsets, cafes, and easy day trips along the south coast.",
+              thingsToDo: ["Beach day", "Sunset viewpoint", "Cafe hopping", "Boat trip (optional)"],
+            },
+            {
+              id: 14,
+              name: "Galle",
+              region: "South",
+              activity: "Culture",
+              budget: "Medium",
+              duration: "1-2 days",
+              rating: 4.7,
+              tags: ["Culture", "UNESCO", "Walkable"],
+              bestTime: "Dec – Mar",
+              costs: "Mostly free to explore; museums optional",
+              lat: 6.0329,
+              lng: 80.2168,
+              image: "https://images.unsplash.com/photo-1625050631148-fd964f2f2f94?auto=format&fit=crop&w=1600&q=70",
+              short: "Historic fort city with cafes, boutiques, and sunsets.",
+              description:
+                "A charming coastal heritage area ideal for walking, shopping, and enjoying sea views from the ramparts.",
+              thingsToDo: ["Fort walk", "Sunset on ramparts", "Cafes", "Small museums"],
+            },
+            {
+              id: 15,
+              name: "Batticaloa",
+              region: "East",
+              activity: "Beach",
+              budget: "Low",
+              duration: "3-4 days",
+              rating: 4.2,
+              tags: ["East", "Coastal", "Relax"],
+              bestTime: "May – Sep",
+              costs: "Low–medium",
+              lat: 7.7170,
+              lng: 81.7000,
+              image: "https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1600&q=70",
+              short: "East-coast stop for calm beaches and local culture.",
+              description:
+                "A quieter east-coast destination with a relaxed pace—great for slower travel away from crowds.",
+              thingsToDo: ["Beach time", "Local food", "Explore town"],
+            },
+            {
+              id: 16,
+              name: "Sigiriya",
+              region: "Central",
+              activity: "Culture",
+              budget: "Medium",
+              duration: "1-2 days",
+              rating: 4.8,
+              tags: ["Culture", "UNESCO", "Sunrise"],
+              bestTime: "Dec – Apr",
+              costs: "Site ticket varies",
+              lat: 7.9570,
+              lng: 80.7603,
+              image: "https://images.unsplash.com/photo-1602751271158-14c7f1d8d1d1?auto=format&fit=crop&w=1600&q=70",
+              short: "Iconic rock fortress with epic views and gardens.",
+              description:
+                "One of Sri Lanka’s top heritage highlights—best climbed early to avoid heat and crowds.",
+              thingsToDo: ["Early climb", "Gardens", "Photography", "Nearby viewpoint hike"],
+            },
+            {
+              id: 17,
+              name: "Yala",
+              region: "South",
+              activity: "Wildlife",
+              budget: "Luxury",
+              duration: "1-2 days",
+              rating: 4.6,
+              tags: ["Wildlife", "Safari", "Photography"],
+              bestTime: "Feb – Jul",
+              costs: "Safari jeep + park tickets vary (often higher)",
+              lat: 6.3667,
+              lng: 81.5167,
+              image: "https://images.unsplash.com/photo-1580554530778-ca36943938b2?auto=format&fit=crop&w=1600&q=70",
+              short: "Sri Lanka’s famous safari experience with diverse wildlife.",
+              description:
+                "A flagship wildlife experience—go early morning for cooler temperatures and better sightings.",
+              thingsToDo: ["Morning safari", "Bird spotting", "Photography", "Follow park rules"],
+            },
+            {
+              id: 18,
+              name: "Hikkaduwa",
+              region: "South",
+              activity: "Beach",
+              budget: "Medium",
+              duration: "3-4 days",
+              rating: 4.3,
+              tags: ["Beach", "Snorkel", "Surf"],
+              bestTime: "Dec – Mar",
+              costs: "Medium; activities vary",
+              lat: 6.1400,
+              lng: 80.1000,
+              image: "https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1600&q=70",
+              short: "Beach town known for snorkeling, surf, and cafes.",
+              description:
+                "A classic south-coast stop for beach activities, ocean fun, and easy evenings by the shore.",
+              thingsToDo: ["Snorkeling", "Beach day", "Surfing", "Cafe hopping"],
+            },
+            {
+              id: 19,
+              name: "Nuwara Eliya",
+              region: "Central",
+              activity: "Hill",
+              budget: "Medium",
+              duration: "3-4 days",
+              rating: 4.5,
+              tags: ["Hill Country", "Tea", "Cool Climate"],
+              bestTime: "Feb – Jun",
+              costs: "Medium; tea visits often low cost",
+              lat: 6.9497,
+              lng: 80.7891,
+              image: "https://images.unsplash.com/photo-1616692014741-3e55b8e9b6fd?auto=format&fit=crop&w=1600&q=70",
+              short: "Cool hill-country escape with tea estates and views.",
+              description:
+                "A cooler climate destination with scenic tea landscapes—great for relaxed walks and viewpoints.",
+              thingsToDo: ["Tea estate visit", "Lake walk", "Viewpoints", "Local markets"],
+            },
+            {
+              id: 20,
+              name: "Ella",
+              region: "Central",
+              activity: "Hill",
+              budget: "Low",
+              duration: "3-4 days",
+              rating: 4.8,
+              tags: ["Hill Country", "Hiking", "Scenic"],
+              bestTime: "Feb – Jun",
+              costs: "Low; hikes are usually free/low",
+              lat: 6.8650,
+              lng: 81.0466,
+              image: "https://images.unsplash.com/photo-1616692014741-3e55b8e9b6fd?auto=format&fit=crop&w=1600&q=70",
+              short: "Hikes, viewpoints, and a laid-back hill-town vibe.",
+              description:
+                "A favorite for hikers and scenery—combine easy trails with cafes and scenic rail routes.",
+              thingsToDo: ["Scenic hike", "Viewpoints", "Cafe hopping", "Photo spots"],
+            },
+            {
+              id: 21,
+              name: "Kalutara",
+              region: "West",
+              activity: "Beach",
+              budget: "Low",
+              duration: "1-2 days",
+              rating: 4.1,
+              tags: ["Beach", "West Coast", "Quick Stop"],
+              bestTime: "Dec – Mar",
+              costs: "Low",
+              lat: 6.5854,
+              lng: 79.9607,
+              image: "https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1600&q=70",
+              short: "Easy west-coast beach stop close to Colombo.",
+              description:
+                "A simple coastal stop for beach time without traveling too far from the capital area.",
+              thingsToDo: ["Beach walk", "Relax", "Local food"],
+            },
+            {
+              id: 22,
+              name: "Haputale",
+              region: "Central",
+              activity: "Hill",
+              budget: "Low",
+              duration: "1-2 days",
+              rating: 4.4,
+              tags: ["Hill Country", "Views", "Tea"],
+              bestTime: "Feb – Jun",
+              costs: "Low",
+              lat: 6.7667,
+              lng: 80.9500,
+              image: "https://images.unsplash.com/photo-1616692014741-3e55b8e9b6fd?auto=format&fit=crop&w=1600&q=70",
+              short: "Hill-town stop for cooler air and panoramic viewpoints.",
+              description:
+                "A quieter hill location focused on scenery—good for viewpoints, tea landscapes, and short nature walks.",
+              thingsToDo: ["Viewpoints", "Tea landscapes", "Short hikes", "Photography"],
+            },
+            {
+              id: 23,
+              name: "Kitulgala",
+              region: "West",
+              activity: "Adventure",
+              budget: "Low",
+              duration: "1-2 days",
+              rating: 4.3,
+              tags: ["Adventure", "Rafting", "Nature"],
+              bestTime: "All year",
+              costs: "Activity packages vary (usually low–medium)",
+              lat: 6.9910,
+              lng: 80.4220,
+              image: "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&w=1600&q=70",
+              short: "Adventure base for rafting and river activities.",
+              description:
+                "A nature-and-river destination popular for adventure activities and short breaks from the city.",
+              thingsToDo: ["White-water rafting", "River walk", "Nature spots"],
+            },
+            {
+              id: 24,
+              name: "Arugam Bay",
+              region: "East",
+              activity: "Adventure",
+              budget: "Low",
+              duration: "5+ days",
+              rating: 4.6,
+              tags: ["Surf", "Beach", "Adventure"],
+              bestTime: "May – Sep",
+              costs: "Surf rentals/lessons vary; stays often budget-friendly",
+              lat: 6.8402,
+              lng: 81.8360,
+              image: "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&w=1600&q=70",
+              short: "Surf-first beach town with a chilled-out vibe.",
+              description:
+                "Sri Lanka’s surf hotspot—ideal for longer stays, surf progression, and relaxed beach living.",
+              thingsToDo: ["Surfing", "Beach day", "Cafe nights", "Explore nearby"],
+            },
+            {
+              id: 25,
+              name: "Trincomalee",
+              region: "East",
+              activity: "Beach",
+              budget: "Medium",
+              duration: "3-4 days",
+              rating: 4.5,
+              tags: ["Beach", "East Coast", "Relax"],
+              bestTime: "May – Sep",
+              costs: "Medium; depends on accommodation and trips",
+              lat: 8.5874,
+              lng: 81.2152,
+              image: "https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1600&q=70",
+              short: "East-coast beaches with calm water and easy days.",
+              description:
+                "A favorite east-coast beach destination—great for swimming, beach time, and relaxed day trips.",
+              thingsToDo: ["Beach time", "Boat trip (optional)", "Local food", "Sunrise/sunset"],
+            },
+            {
+              id: 26,
+              name: "Kalpitiya",
+              region: "West",
+              activity: "Adventure",
+              budget: "Medium",
+              duration: "3-4 days",
+              rating: 4.3,
+              tags: ["Kite", "Lagoon", "Wildlife (Seasonal)"],
+              bestTime: "Dec – Mar",
+              costs: "Tours and activity packages vary",
+              lat: 8.2333,
+              lng: 79.7667,
+              image: "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&w=1600&q=70",
+              short: "Lagoon adventures and windy-season activities.",
+              description:
+                "Known for lagoon-based activities and a quieter coastal setting—good for adventure-oriented stays.",
+              thingsToDo: ["Lagoon time", "Kitesurfing (if available)", "Boat tours"],
+            },
+            {
+              id: 27,
+              name: "Polonnaruwa",
+              region: "Central",
+              activity: "Culture",
+              budget: "Low",
+              duration: "1-2 days",
+              rating: 4.5,
+              tags: ["Culture", "Ancient", "Ruins"],
+              bestTime: "Dec – Apr",
+              costs: "Site tickets vary; bicycle rental low",
+              lat: 7.9403,
+              lng: 81.0188,
+              image: "https://images.unsplash.com/photo-1602751271158-14c7f1d8d1d1?auto=format&fit=crop&w=1600&q=70",
+              short: "Ancient city ruins—great for a bicycle exploration day.",
+              description:
+                "A historic ruins area best explored slowly—many visitors enjoy cycling between key points of interest.",
+              thingsToDo: ["Ruins tour", "Cycling", "Photography", "Local guide (optional)"],
+            },
+            {
+              id: 28,
+              name: "Anuradhapura",
+              region: "North",
+              activity: "Culture",
+              budget: "Low",
+              duration: "3-4 days",
+              rating: 4.6,
+              tags: ["Culture", "Ancient", "Sacred City"],
+              bestTime: "Dec – Apr",
+              costs: "Site tickets vary; transport low–medium",
+              lat: 8.3114,
+              lng: 80.4037,
+              image: "https://images.unsplash.com/photo-1602751271158-14c7f1d8d1d1?auto=format&fit=crop&w=1600&q=70",
+              short: "Sacred ancient city with major heritage landmarks.",
+              description:
+                "A large heritage area with significant historical and religious landmarks—plan time to explore properly.",
+              thingsToDo: ["Heritage sites", "Cycling", "Museums (optional)", "Sunrise/sunset views"],
+            },
+            {
+              id: 29,
+              name: "Matara",
+              region: "South",
+              activity: "Beach",
+              budget: "Low",
+              duration: "1-2 days",
+              rating: 4.2,
+              tags: ["South", "Coastal", "Local"],
+              bestTime: "Dec – Apr",
+              costs: "Low",
+              lat: 5.9485,
+              lng: 80.5353,
+              image: "https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1600&q=70",
+              short: "Southern coastal city stop with easy access to nearby beaches.",
+              description:
+                "A useful south-coast stop for local experiences, short beach visits, and easy onward travel.",
+              thingsToDo: ["Beach stop", "Local food", "Explore town"],
+            },
+            {
+              id: 30,
+              name: "Hatton",
+              region: "Central",
+              activity: "Hill",
+              budget: "Low",
+              duration: "1-2 days",
+              rating: 4.3,
+              tags: ["Hill Country", "Tea", "Scenic"],
+              bestTime: "Feb – Jun",
+              costs: "Low–medium",
+              lat: 6.9000,
+              lng: 80.6000,
+              image: "https://images.unsplash.com/photo-1616692014741-3e55b8e9b6fd?auto=format&fit=crop&w=1600&q=70",
+              short: "Hill-country base near scenic tea areas and viewpoints.",
+              description:
+                "A hill-country base that works well for scenic routes, tea landscapes, and cooler weather travel.",
+              thingsToDo: ["Tea landscapes", "Viewpoints", "Short hikes", "Relaxed stay"],
+            },
+>>>>>>> Stashed changes
+          ]
+        }
+      },
+
+      computed: {
+<<<<<<< Updated upstream
+        regions(){
+          return [...new Set(this.destinations.map(d => d.region))];
+        },
+        activities(){
+          return [...new Set(this.destinations.map(d => d.activity))];
+        },
+        featuredDestinations(){
+          return [...this.destinations].sort((a,b)=>b.rating-a.rating).slice(0,4);
+        },
+        filteredDestinations(){
+=======
+        regions() {
+          return [...new Set(this.destinations.map(d => d.region))];
+        },
+        activities() {
+          return [...new Set(this.destinations.map(d => d.activity))];
+        },
+        featuredDestinations() {
+          return [...this.destinations].sort((a, b) => b.rating - a.rating).slice(0, 4);
+        },
+        filteredDestinations() {
+>>>>>>> Stashed changes
+          const text = (this.q || '').toLowerCase();
+          let list = this.destinations.filter(d => {
+            const matchesText =
+              !text ||
+              d.name.toLowerCase().includes(text) ||
+              d.region.toLowerCase().includes(text) ||
+              d.activity.toLowerCase().includes(text) ||
+              d.tags.join(' ').toLowerCase().includes(text);
+
+            const matchesRegion = !this.filters.region || d.region === this.filters.region;
+            const matchesActivity = !this.filters.activity || d.activity === this.filters.activity;
+            const matchesBudget = !this.filters.budget || d.budget === this.filters.budget;
+            const matchesDuration = !this.filters.duration || d.duration === this.filters.duration;
+            const matchesTag = !this.filters.tag || d.tags.includes(this.filters.tag) || d.activity === this.filters.tag;
+
+            return matchesText && matchesRegion && matchesActivity && matchesBudget && matchesDuration && matchesTag;
+          });
+
+<<<<<<< Updated upstream
+          if(this.sortBy === 'rating') list.sort((a,b)=>b.rating-a.rating);
+          if(this.sortBy === 'budget'){
+            const rank = {Low:1, Medium:2, Luxury:3};
+            list.sort((a,b)=>(rank[a.budget]||9)-(rank[b.budget]||9));
+          }
+          if(this.sortBy === 'name') list.sort((a,b)=>a.name.localeCompare(b.name));
+          if(this.sortBy === 'popular'){
+            list.sort((a,b)=> (b.rating + b.tags.length*0.05) - (a.rating + a.tags.length*0.05));
+          }
+          return list;
+        },
+        timeline(){
+          const perDay = 2;
+          const chunks = [];
+          for(let i=0; i<this.plan.length; i+=perDay){
+            chunks.push(this.plan.slice(i, i+perDay));
+          }
+          return chunks;
+        },
+        tripStyle(){
+          if(this.plan.length===0) return '—';
+          const budgets = this.plan.map(p=>p.budget);
+          const hasLuxury = budgets.includes('Luxury');
+          const hasLow = budgets.includes('Low');
+          if(hasLuxury && hasLow) return 'Mixed budget (Budget + Premium experiences)';
+          if(hasLuxury) return 'Comfort / premium travel';
+          if(hasLow) return 'Budget-friendly travel';
+          return 'Balanced mid-range travel';
+        },
+        suggestions(){
+          const planIds = new Set(this.plan.map(p=>p.id));
+          const planTags = new Set(this.plan.flatMap(p=>p.tags));
+          const planActs = new Set(this.plan.map(p=>p.activity));
+          const scored = this.destinations
+            .filter(d => !planIds.has(d.id))
+            .map(d => {
+              const tagScore = d.tags.filter(t=>planTags.has(t)).length;
+              const actScore = planActs.has(d.activity) ? 1 : 0;
+              return { d, score: tagScore*2 + actScore + d.rating*0.2 };
+            })
+            .sort((a,b)=>b.score-a.score)
+            .slice(0,4)
+            .map(x=>x.d);
+=======
+          if (this.sortBy === 'rating') list.sort((a, b) => b.rating - a.rating);
+          if (this.sortBy === 'budget') {
+            const rank = { Low: 1, Medium: 2, Luxury: 3 };
+            list.sort((a, b) => (rank[a.budget] || 9) - (rank[b.budget] || 9));
+          }
+          if (this.sortBy === 'name') list.sort((a, b) => a.name.localeCompare(b.name));
+          if (this.sortBy === 'popular') {
+            list.sort((a, b) => (b.rating + b.tags.length * 0.05) - (a.rating + a.tags.length * 0.05));
+          }
+          return list;
+        },
+        timeline() {
+          const perDay = 2;
+          const chunks = [];
+          for (let i = 0; i < this.plan.length; i += perDay) {
+            chunks.push(this.plan.slice(i, i + perDay));
+          }
+          return chunks;
+        },
+        tripStyle() {
+          if (this.plan.length === 0) return '—';
+          const budgets = this.plan.map(p => p.budget);
+          const hasLuxury = budgets.includes('Luxury');
+          const hasLow = budgets.includes('Low');
+          if (hasLuxury && hasLow) return 'Mixed budget (Budget + Premium experiences)';
+          if (hasLuxury) return 'Comfort / premium travel';
+          if (hasLow) return 'Budget-friendly travel';
+          return 'Balanced mid-range travel';
+        },
+        suggestions() {
+          const planIds = new Set(this.plan.map(p => p.id));
+          const planTags = new Set(this.plan.flatMap(p => p.tags));
+          const planActs = new Set(this.plan.map(p => p.activity));
+          const scored = this.destinations
+            .filter(d => !planIds.has(d.id))
+            .map(d => {
+              const tagScore = d.tags.filter(t => planTags.has(t)).length;
+              const actScore = planActs.has(d.activity) ? 1 : 0;
+              return { d, score: tagScore * 2 + actScore + d.rating * 0.2 };
+            })
+            .sort((a, b) => b.score - a.score)
+            .slice(0, 4)
+            .map(x => x.d);
+>>>>>>> Stashed changes
+
+          return scored;
+        }
+      },
+
+      watch: {
+<<<<<<< Updated upstream
+        route(val){
+          if(val === 'map'){
+            this.initMap();
+          }
+        }
+      },
+
+      methods: {
+        go(r){
+          this.route = r;
+          if(r !== 'explore') this.filters.tag = '';
+          window.scrollTo({top:0, behavior:'smooth'});
+        },
+
+        quickCategory(key){
+          this.q = '';
+          this.filters = { region:'', activity:'', budget:'', duration:'', tag:'' };
+
+          if(key==='Hill') this.filters.activity = 'Hill';
+          else if(key==='Food') this.filters.activity = 'Food';
+          else if(key==='Beach') this.filters.activity = 'Beach';
+          else if(key==='Culture') this.filters.activity = 'Culture';
+          else if(key==='Wildlife') this.filters.activity = 'Wildlife';
+          else if(key==='Adventure') this.filters.activity = 'Adventure';
+=======
+        route(val) {
+          if (val === "map") this.initMap();
+        },
+        startDate() {
+          this.validateDates();
+        },
+        endDate() {
+          this.validateDates();
+        },
+      },
+
+      methods: {
+        go(r) {
+          this.route = r;
+          if (r !== "explore") this.filters.tag = "";
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        },
+
+        validateDates() {
+          this.dateError = "";
+          if (this.startDate && this.endDate) {
+            const s = new Date(this.startDate);
+            const e = new Date(this.endDate);
+            if (e < s) {
+              this.dateError = "End date must be after start date.";
+            }
+          }
+        },
+
+        quickCategory(key) {
+          this.q = '';
+          this.filters = { region: '', activity: '', budget: '', duration: '', tag: '' };
+
+          if (key === 'Hill') this.filters.activity = 'Hill';
+          else if (key === 'Food') this.filters.activity = 'Food';
+          else if (key === 'Beach') this.filters.activity = 'Beach';
+          else if (key === 'Culture') this.filters.activity = 'Culture';
+          else if (key === 'Wildlife') this.filters.activity = 'Wildlife';
+          else if (key === 'Adventure') this.filters.activity = 'Adventure';
+>>>>>>> Stashed changes
+
+          this.go('explore');
+        },
+
+<<<<<<< Updated upstream
+        applyTag(tag){
+          this.filters.tag = tag;
+        },
+
+        resetFilters(){
+          this.filters = { region:'', activity:'', budget:'', duration:'', tag:'' };
+=======
+        applyTag(tag) {
+          this.filters.tag = tag;
+        },
+
+        resetFilters() {
+          this.filters = { region: '', activity: '', budget: '', duration: '', tag: '' };
+>>>>>>> Stashed changes
+          this.q = '';
+          this.sortBy = 'popular';
+        },
+
+<<<<<<< Updated upstream
+        openDetails(d){
+=======
+        openDetails(d) {
+>>>>>>> Stashed changes
+          this.selected = d;
+          const modal = new bootstrap.Modal(document.getElementById('detailsModal'));
+          modal.show();
+        },
+
+<<<<<<< Updated upstream
+        closeModal(id){
+          const el = document.getElementById(id);
+          const modal = bootstrap.Modal.getInstance(el);
+          if(modal) modal.hide();
+        },
+
+        addToPlan(d){
+          const exists = this.plan.some(p => p.id === d.id);
+          if(exists){
+=======
+        closeModal(id) {
+          const el = document.getElementById(id);
+          const modal = bootstrap.Modal.getInstance(el);
+          if (modal) modal.hide();
+        },
+
+        addToPlan(d) {
+          const exists = this.plan.some(p => p.id === d.id);
+          if (exists) {
+>>>>>>> Stashed changes
+            this.toast(`Already in plan: ${d.name}`);
+            return;
+          }
+          this.plan.push({ ...d, note: '' });
+          this.toast(`Added to plan: ${d.name}`);
+        },
+
+<<<<<<< Updated upstream
+        removeFromPlan(id){
+=======
+        removeFromPlan(id) {
+>>>>>>> Stashed changes
+          this.plan = this.plan.filter(p => p.id !== id);
+          this.toast('Removed from plan');
+        },
+
+<<<<<<< Updated upstream
+        clearPlan(){
+=======
+        clearPlan() {
+>>>>>>> Stashed changes
+          this.plan = [];
+          this.toast('Plan cleared');
+        },
+
+<<<<<<< Updated upstream
+        autoPlan(){
+          const score = (p) => {
+            const actRank = {Culture:1, Hill:2, Beach:3, Wildlife:4, Food:5, Adventure:6};
+            const regRank = {West:1, Central:2, South:3, East:4, North:5};
+            return (regRank[p.region]||9)*10 + (actRank[p.activity]||9);
+          };
+          this.plan = [...this.plan].sort((a,b)=>score(a)-score(b));
+          this.toast('Auto-suggest applied');
+        },
+
+        fakeExport(){
+          this.toast('Export is UI-only in this preview (connect PDF later).');
+        },
+
+        toast(msg){
+=======
+        autoPlan() {
+          const score = (p) => {
+            const actRank = { Culture: 1, Hill: 2, Beach: 3, Wildlife: 4, Food: 5, Adventure: 6 };
+            const regRank = { West: 1, Central: 2, South: 3, East: 4, North: 5 };
+            return (regRank[p.region] || 9) * 10 + (actRank[p.activity] || 9);
+          };
+          this.plan = [...this.plan].sort((a, b) => score(a) - score(b));
+          this.toast('Auto-suggest applied');
+        },
+
+        fakeExport() {
+          this.toast('Export is UI-only in this preview (connect PDF later).');
+        },
+
+        toast(msg) {
+>>>>>>> Stashed changes
+          this.toastMsg = msg;
+          const t = new bootstrap.Toast(document.getElementById('toast'), { delay: 2200 });
+          t.show();
+        },
+
+<<<<<<< Updated upstream
+        onDragStart(idx){
+          this.dragIndex = idx;
+        },
+        onDrop(idx){
+          if(this.dragIndex === null) return;
+=======
+        onDragStart(idx) {
+          this.dragIndex = idx;
+        },
+        onDrop(idx) {
+          if (this.dragIndex === null) return;
+>>>>>>> Stashed changes
+          const moved = this.plan.splice(this.dragIndex, 1)[0];
+          this.plan.splice(idx, 0, moved);
+          this.dragIndex = null;
+          this.toast('Reordered itinerary');
+        },
+
+<<<<<<< Updated upstream
+        openLogin(){
+=======
+        openLogin() {
+>>>>>>> Stashed changes
+          const modal = new bootstrap.Modal(document.getElementById('loginModal'));
+          modal.show();
+        },
+
+<<<<<<< Updated upstream
+        fakeLogin(){
+=======
+        fakeLogin() {
+>>>>>>> Stashed changes
+          this.closeModal('loginModal');
+          this.toast('Logged in (mock). Add backend later.');
+          this.login.email = '';
+          this.login.password = '';
+        },
+
+<<<<<<< Updated upstream
+        async initMap(){
+          await nextTick();
+
+          if(this.map){
+            setTimeout(()=>this.map.invalidateSize(), 200);
+=======
+        async initMap() {
+          await nextTick();
+
+          if (this.map) {
+            setTimeout(() => this.map.invalidateSize(), 200);
+>>>>>>> Stashed changes
+            return;
+          }
+
+          this.map = L.map('map', { scrollWheelZoom: true }).setView([7.8731, 80.7718], 7);
+
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '&copy; OpenStreetMap contributors'
+          }).addTo(this.map);
+
+          this.addMarkers();
+<<<<<<< Updated upstream
+          setTimeout(()=>this.map.invalidateSize(), 200);
+        },
+
+        addMarkers(){
+          this.mapMarkers.forEach(m=>m.remove());
+          this.mapMarkers = [];
+
+          this.destinations.forEach(d=>{
+=======
+          setTimeout(() => this.map.invalidateSize(), 200);
+        },
+
+        addMarkers() {
+          this.mapMarkers.forEach(m => m.remove());
+          this.mapMarkers = [];
+
+          this.destinations.forEach(d => {
+>>>>>>> Stashed changes
+            const marker = L.marker([d.lat, d.lng]).addTo(this.map);
+            marker.bindPopup(`
+              <div style="min-width:180px">
+                <div style="font-weight:800">${d.name}</div>
+                <div style="color:#6b7280;font-size:12px">${d.region} • ${d.activity}</div>
+                <div style="margin-top:6px;font-size:12px">
+                  <span>⭐ ${d.rating}</span> • <span>${d.budget}</span>
+                </div>
+                <div style="margin-top:8px;color:#6b7280;font-size:12px">${d.short}</div>
+              </div>
+            `);
+
+            marker.on('click', () => {
+              this.selected = d;
+<<<<<<< Updated upstream
+              setTimeout(()=>this.openDetails(d), 200);
+=======
+              setTimeout(() => this.openDetails(d), 200);
+>>>>>>> Stashed changes
+            });
+
+            this.mapMarkers.push(marker);
+          });
+        },
+
+<<<<<<< Updated upstream
+        centerMap(){
+          if(!this.map) return;
+=======
+        centerMap() {
+          if (!this.map) return;
+>>>>>>> Stashed changes
+          this.map.setView([7.8731, 80.7718], 7);
+        }
+      }
+    }).mount('#app');
+  </script>
+<<<<<<< Updated upstream
+{% endverbatim %}
+</body>
+</html>
+=======
+  {% endverbatim %}
+</body>
+
+</html>
+>>>>>>> Stashed changes
