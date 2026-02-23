@@ -216,3 +216,4 @@ __MACOSX/
 media/
 staticfiles/
 
+.DS_Store
